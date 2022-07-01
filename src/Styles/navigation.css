@@ -1,0 +1,162 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 0 10px;
+  z-index: 5;
+}
+nav.black-background {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+nav.no-background {
+  background-color: transparent;
+}
+nav .hamburger-btn svg {
+  vertical-align: baseline;
+  color: white;
+}
+nav .hamburger-btn svg:hover {
+  cursor: pointer;
+}
+nav .logo-navigation {
+  display: flex;
+  align-items: center;
+}
+nav .logo-navigation img {
+  width: 75px;
+}
+nav .logo-navigation img:hover {
+  cursor: pointer;
+}
+nav .logo-navigation ul {
+  position: fixed;
+  top: 45px;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 0;
+  z-index: 3;
+  padding: 0;
+  transition: left 0.3s ease;
+}
+nav .logo-navigation ul.active {
+  left: 0;
+}
+nav .logo-navigation ul li {
+  padding: 15px;
+}
+nav .logo-navigation ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 0 10px;
+  text-decoration: none;
+  line-height: 1.5;
+  font-size: 14px;
+}
+nav .search-account {
+  display: flex;
+}
+nav .search-account .search svg, nav .search-account .notifications svg, nav .search-account .my-account svg {
+  color: white;
+  vertical-align: middle;
+}
+nav .search-account .search svg:hover, nav .search-account .notifications svg:hover, nav .search-account .my-account svg:hover {
+  cursor: pointer;
+}
+nav .search-account .search img, nav .search-account .notifications img, nav .search-account .my-account img {
+  width: 25px;
+  vertical-align: middle;
+}
+nav .search-account .search img:hover, nav .search-account .notifications img:hover, nav .search-account .my-account img:hover {
+  cursor: pointer;
+}
+nav .search-account .search {
+  margin-right: 10px;
+}
+nav .search-account .notifications {
+  display: none;
+}
+nav .search-account .kid-link {
+  display: none;
+}
+
+@media only screen and (min-width: 650px) {
+  nav .hamburger-btn {
+    display: none;
+  }
+  nav .logo-navigation img {
+    width: 100px;
+  }
+  nav .logo-navigation ul {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-left: 20px;
+    position: unset;
+    width: 100%;
+    background: unset;
+  }
+  nav .logo-navigation ul li {
+    float: left;
+    padding: 0;
+  }
+  nav .logo-navigation ul li.kids {
+    display: none;
+  }
+  nav .logo-navigation ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0 10px;
+    text-decoration: none;
+    line-height: 1.5;
+    font-size: 12px;
+  }
+  nav .search-account div {
+    margin: 0 10px;
+  }
+  nav .search-account .search img, nav .search-account .notifications img, nav .search-account .my-account img {
+    width: 20px;
+  }
+  nav .search-account .search svg, nav .search-account .notifications svg, nav .search-account .my-account svg {
+    font-size: 14px;
+  }
+  nav .search-account .notifications {
+    display: block;
+  }
+  nav .search-account .kid-link {
+    display: block;
+  }
+  nav .search-account .kid-link a {
+    color: white;
+    text-decoration: none;
+    line-height: 1.5;
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  nav .logo-navigation ul {
+    margin-left: 30px;
+  }
+  nav .logo-navigation ul li a {
+    font-size: 16px;
+  }
+  nav .search-account img {
+    width: 30px;
+  }
+  nav .search-account svg {
+    font-size: 16px;
+  }
+  nav .search-account .kid-link a {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=navigation.css.map */

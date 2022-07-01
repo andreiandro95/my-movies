@@ -1,0 +1,185 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 0 10px;
+    z-index: 5;
+    &.black-background{
+        background-color: rgba(0,0,0,.8);
+    }
+    &.no-background{
+        background-color: transparent;
+    }
+    .hamburger-btn{
+        svg{
+            vertical-align: baseline;
+            color: white;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    .logo-navigation{
+        display: flex;
+        align-items: center;
+        img{
+            width: 75px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        ul{
+            position: fixed;
+            top: 45px;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background-color: rgba(0,0,0,.8);
+            margin: 0;
+            z-index: 3;
+            padding: 0;
+            transition: left .3s ease;
+            &.active{
+                left: 0;
+            }
+            li{
+                padding: 15px;
+                a{
+                    display: block;
+                    color: white;
+                    text-align: center;
+                    padding: 0 10px;
+                    text-decoration: none;
+                    line-height: 1.5;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .search-account{
+        display: flex;
+        .search, .notifications, .my-account{
+            svg{
+                color: white;
+                vertical-align: middle;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            img{
+                width: 25px;
+                vertical-align: middle;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        .search{
+            margin-right: 10px;
+        }
+        .notifications{
+            display: none;
+        }
+        .kid-link{
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 650px) {
+    nav{
+        .hamburger-btn{
+            display: none;
+        }
+        .logo-navigation{
+            img{
+                width: 100px;
+            }
+            ul{
+                display: inline;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                margin-left: 20px;
+                position: unset;
+                width: 100%;
+                background: unset;  
+                li{
+                    float: left;
+                    padding: 0;
+                    &.kids{
+                        display: none;
+                    }
+                    a{
+                        display: block;
+                        color: white;
+                        text-align: center;
+                        padding: 0 10px;
+                        text-decoration: none;
+                        line-height: 1.5;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .search-account{
+            div{
+                margin: 0 10px;
+            }
+            .search, .notifications, .my-account{
+                img{
+                    width: 20px;
+                }
+                svg{
+                    font-size: 14px;
+                }
+            }
+            .notifications{
+                display: block;
+            }
+            .kid-link{
+                display: block;
+                a{
+                    color: white;
+                    text-decoration: none;
+                    line-height: 1.5;
+                    font-size: 12px;
+                } 
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 900px){
+    nav{
+        .logo-navigation{
+            ul{
+                margin-left: 30px;
+                li{
+                    a{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .search-account{
+            img{
+                width: 30px;
+            }
+            svg{
+                font-size: 16px;
+            }
+            .kid-link{
+                a{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
